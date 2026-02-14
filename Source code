@@ -1,0 +1,54 @@
+# IoT Based Fertilizer Recommendation System
+# Author: G. Sowmya
+
+def recommend_fertilizer(nitrogen, phosphorus, potassium, ph):
+    
+    print("\n--- Soil Analysis Report ---")
+    print(f"Nitrogen (N): {nitrogen}")
+    print(f"Phosphorus (P): {phosphorus}")
+    print(f"Potassium (K): {potassium}")
+    print(f"Soil pH: {ph}")
+
+    # Ideal range conditions
+    if nitrogen < 50:
+        print("Nitrogen level is LOW → Recommend Urea or Nitrogen-rich fertilizer")
+    elif nitrogen > 100:
+        print("Nitrogen level is HIGH → Reduce Nitrogen fertilizer usage")
+    else:
+        print("Nitrogen level is OPTIMAL")
+
+    if phosphorus < 30:
+        print("Phosphorus level is LOW → Recommend DAP fertilizer")
+    elif phosphorus > 80:
+        print("Phosphorus level is HIGH")
+    else:
+        print("Phosphorus level is OPTIMAL")
+
+    if potassium < 40:
+        print("Potassium level is LOW → Recommend Potash fertilizer")
+    elif potassium > 90:
+        print("Potassium level is HIGH")
+    else:
+        print("Potassium level is OPTIMAL")
+
+    if ph < 6:
+        print("Soil is ACIDIC → Add Lime")
+    elif ph > 8:
+        print("Soil is ALKALINE → Add Organic Compost")
+    else:
+        print("Soil pH is NEUTRAL (Good Condition)")
+
+    print("\nFertilizer Recommendation Completed ✅")
+
+
+# ---- Main Program ----
+
+print("IoT Based Smart Fertilizer Monitoring System")
+
+# Simulated IoT sensor input
+nitrogen = float(input("Enter Nitrogen value: "))
+phosphorus = float(input("Enter Phosphorus value: "))
+potassium = float(input("Enter Potassium value: "))
+ph = float(input("Enter Soil pH value: "))
+
+recommend_fertilizer(nitrogen, phosphorus, potassium, ph)
